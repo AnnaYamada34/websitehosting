@@ -59,6 +59,64 @@
     .img1 { top: 10%; left: 10%; animation-delay: 1s; }
     .img2 { bottom: 10%; right: 15%; animation-delay: 2s; }
     .img3 { top: 20%; right: 10%; animation-delay: 3s; }
+
+    button {
+      margin-top: 30px;
+      background-color: #00ffff;
+      color: #0f2027;
+      font-size: 1.1rem;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #0fffc0;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.9);
+    }
+
+    .description {
+      margin-top: 30px;
+      width: 70%;
+      max-width: 750px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+      display: none;
+      text-align: left;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .description h3 {
+      color: #00ffff;
+      margin-bottom: 5px;
+    }
+
+    .description p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      line-height: 1.5;
+      color: #e0e0e0;
+    }
+
+    .highlight {
+      color: #00ffcc;
+      font-weight: 600;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 <body>
@@ -70,6 +128,39 @@
   <img src="images/code.jpg" alt="Coding" class="floating-img img1">
   <img src="images/network.jpg" alt="Network" class="floating-img img2">
   <img src="images/ai.jpg" alt="AI" class="floating-img img3">
+
+  <!-- Button -->
+  <button onclick="showDescriptions()">Show Descriptions</button>
+
+  <!-- Description Section -->
+  <div class="description" id="descBox">
+    
+    <div class="section">
+      <h3>💻 Coding</h3>
+      <p>Coding is the process of creating instructions that computers follow. It’s the foundation of all software — from apps and websites to artificial intelligence and robotics.</p>
+      <p><span class="highlight">Potential:</span> Mastering coding can open doors to careers such as software engineering, web development, and app creation. It empowers individuals to turn ideas into digital reality and solve real-world problems efficiently.</p>
+    </div>
+
+    <div class="section">
+      <h3>🤖 Artificial Intelligence (AI)</h3>
+      <p>AI enables machines to mimic human intelligence. It powers technologies like voice assistants, recommendation systems, and self-driving cars, making life smarter and easier.</p>
+      <p><span class="highlight">Potential:</span> AI is one of the fastest-growing fields globally, offering roles in data science, machine learning, and robotics. Its innovation potential reaches healthcare, education, and even creative arts.</p>
+    </div>
+
+    <div class="section">
+      <h3>🌐 Networking</h3>
+      <p>Networking connects computers and devices together to share data and resources. It’s the backbone of the internet and ensures seamless communication across the world.</p>
+      <p><span class="highlight">Potential:</span> Networking specialists maintain and secure global connectivity. Careers in cybersecurity, cloud infrastructure, and IT support rely heavily on strong networking skills — essential for every digital system today.</p>
+    </div>
+
+  </div>
+
+  <script>
+    function showDescriptions() {
+      const box = document.getElementById("descBox");
+      box.style.display = box.style.display === "block" ? "none" : "block";
+    }
+  </script>
 
 </body>
 </html>
