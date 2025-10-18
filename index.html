@@ -3,34 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My GitHub Page</title>
+  <title>Information Technology</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      text-align: center;
+    * {
       margin: 0;
-      padding: 50px;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
+
+    body {
+      background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
     h1 {
-      color: #333;
+      font-size: 3rem;
+      text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+      animation: float 3s ease-in-out infinite;
     }
+
     p {
-      color: #555;
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-top: 20px;
+      line-height: 1.6;
+      animation: float 4s ease-in-out infinite alternate;
     }
-    a {
-      color: #007acc;
-      text-decoration: none;
+
+    .floating-img {
+      position: absolute;
+      width: 200px;
+      border-radius: 15px;
+      animation: floatImage 5s ease-in-out infinite;
+      opacity: 0.8;
     }
-    a:hover {
-      text-decoration: underline;
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
     }
+
+    @keyframes floatImage {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-30px) rotate(3deg); }
+    }
+
+    .img1 { top: 10%; left: 10%; animation-delay: 1s; }
+    .img2 { bottom: 10%; right: 15%; animation-delay: 2s; }
+    .img3 { top: 20%; right: 10%; animation-delay: 3s; }
   </style>
 </head>
 <body>
-  <h1>🚀 Welcome to My Website</h1>
-  <p>This page is hosted on <b>GitHub Pages</b>.</p>
-  <p>Edit <code>index.html</code> in your repository to update this content.</p>
-  <p><a href="https://github.com/">Visit GitHub</a></p>
+
+  <h1>Explore Information Technology</h1>
+  <p>Unlock your potential with the power of technology. Learn programming, cybersecurity, networking, and more — preparing you for the digital world of tomorrow.</p>
+
+  <!-- Floating Images -->
+  <img src="images/code.jpg" alt="Coding" class="floating-img img1">
+  <img src="images/network.jpg" alt="Network" class="floating-img img2">
+  <img src="images/ai.jpg" alt="AI" class="floating-img img3">
+
 </body>
 </html>
+
+
